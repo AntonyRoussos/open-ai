@@ -2,8 +2,7 @@ import "./App.css";
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./components/pages/Home";
-import Login from "./components/pages/Login";
-import Profile from "./components/pages/Profile";
+import About from "./components/pages/About";
 import Header from "./components/common/Header";
 import User from "./components/pages/User";
 const App = () => {
@@ -17,8 +16,7 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path={"/users/:id"} element={<User />} />
           {/*Display Profile page only if user is logged in*/}
-          <Route path="/profile" element={<Profile />} />
-          <Route path="/login" element={<Login />} />
+          <Route path="/about" element={<About />} />
         </Routes>
       </Router>
     </>

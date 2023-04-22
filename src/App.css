@@ -6,6 +6,10 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.pageTitle{
+  text-align: center;
+}
+
 .list {
   display: flex;
   justify-content: center;
@@ -16,6 +20,33 @@ body {
   margin: 0; /* Remove margins */
 }
 
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  background-color: rgb(70, 66, 66);
+  align-items: center;
+  list-style-type: none; /* Remove bullets */
+  padding: 5; /* Remove padding */
+  height: 50px;
+  margin: 0; /* Remove margins */
+}
+
+.navlink{
+  color: #f1f1f1;
+}
+
+.searchBar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.searchBar input{
+  padding: 5px;
+  font-size: 15px;
+}
+
+
 /* Style the counter cards */
 .list-item {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -23,7 +54,15 @@ body {
   margin: 10px;
   text-align: center;
   background-color: #f1f1f1;
+  cursor: pointer;
 
+}
+
+.list-item:hover{
+  color: rgb(69, 69, 145);
+}
+.site:hover{
+  color: rgb(69, 69, 145);
 }
 
   /* Responsive columns */

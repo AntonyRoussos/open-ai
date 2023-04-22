@@ -20,7 +20,7 @@ const User = () => {
   }, []);
   return (
     <>
-      <div>User Page</div>
+      <div className="pageTitle"><h2>User</h2></div>
       {loading ? (
         <div>Loading...</div>
       ) : (
@@ -46,12 +46,10 @@ const User = () => {
                 justifyContent: "space-evenly",
               }}
             >
-              <div>@{user.username}</div>
-
-              <div>NAME: {user.name}</div>
-              <div>COMPANY: {user.company?.name}</div>
-              <div>EMAIL: {user.email}</div>
-              <div
+              <div><b>{user.name}</b></div>
+              <div>Company: {user.company?.name}</div>
+              <div>Email: {user.email}</div>
+              <div className="site"
                 style={{ cursor: "pointer" }}
                 onClick={() => {
                   window.location.href = `https://www.${user.website}`;

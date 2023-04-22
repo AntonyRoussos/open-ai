@@ -26,8 +26,10 @@ const Home = () => {
   );
   return (
     <>
-      <div>Home Page</div>
-      <input type="text" onChange={handleSearchChange} />
+      <div className="pageTitle"><h2>Users</h2></div>
+      <div className="searchBar">
+        <input type="text" onChange={handleSearchChange} placeholder="Search..."/>
+      </div>
       <ul className="list">
         {filteredUsers.map((user) => (
           <UserCard key={user.id} user={user} />
