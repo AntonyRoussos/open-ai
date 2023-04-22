@@ -20,6 +20,7 @@ const User = () => {
   }, []);
   return (
     <>
+    <div>User Page</div>
       {loading ? (
         <div>Loading...</div>
       ) : (
@@ -33,7 +34,7 @@ const User = () => {
                   background: "#f92344",
                   borderRadius: 16,
                 }}
-                src="https://cdn.pixabay.com/photo/2013/07/13/10/07/man-156584_960_720.png"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVYUbi-Jf5QxIW-koSAO97ZmKrOXadXeJ3xQ&usqp=CAU" alt="user"
               />
             </div>
             <div
@@ -45,10 +46,10 @@ const User = () => {
               }}
             >
               <div>@{user.username}</div>
-              <div>NAME: {user.name}</div>
-              <div>COMPANY: {user.company?.name}</div>
-              <div>EMAIL: {user.email}</div>
-              <a href={user.website}>{user.website}</a>
+              <div>Name: {user.name}</div>
+              <div>Copmany: {user.company?.name}</div>
+              <div>Email: {user.email}</div>
+              <a href={`https://${user.website}`}>site</a>
             </div>
           </div>
         </div>
