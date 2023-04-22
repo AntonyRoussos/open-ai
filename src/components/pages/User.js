@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 
 const User = () => {
+  const { id } = useParams();
   const [user, setUser] = useState([]);
   const [loading, setLoading] = useState(false);
 
@@ -8,7 +10,7 @@ const User = () => {
     async function fetchData() {
       setLoading(true);
       const response = await fetch(
-        "https://jsonplaceholder.typicode.com/users/1"
+        `https://jsonplaceholder.typicode.com/users/${id}`
       );
       const responeJson = await response.json();
       setUser(responeJson);
