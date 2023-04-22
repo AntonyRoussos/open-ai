@@ -48,7 +48,14 @@ const User = () => {
               <div>NAME: {user.name}</div>
               <div>COMPANY: {user.company?.name}</div>
               <div>EMAIL: {user.email}</div>
-              <a href={user.website}>{user.website}</a>
+              <div
+                style={{ cursor: "pointer" }}
+                onClick={() => {
+                  window.location.href = `https://www.${user.website}`;
+                }}
+              >
+                {user.website}
+              </div>
             </div>
           </div>
         </div>
