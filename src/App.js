@@ -5,6 +5,7 @@ import Home from "./components/pages/Home";
 import Login from "./components/pages/Login";
 import Profile from "./components/pages/Profile";
 import Header from "./components/common/Header";
+import User from "./components/pages/User";
 const App = () => {
   return (
     <>
@@ -14,6 +15,7 @@ const App = () => {
         <Routes>
           {/*Home Page with informations and our feature but only if user is logged in can use it*/}
           <Route path="/" element={<Home />} />
+          <Route path={"/users/:id"} element={<User />} />
           {/*Display Profile page only if user is logged in*/}
           <Route path="/profile" element={<Profile />} />
           <Route path="/login" element={<Login />} />
