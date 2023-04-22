@@ -7,6 +7,7 @@ const Header = () => {
         <li className="navlink">
           <NavLink style={({ isActive }) => {
     return {
+      textDecoration: "none",
       color: isActive ? "white" : "black",
     };
   }} to="/">Home</NavLink>
@@ -14,6 +15,7 @@ const Header = () => {
         <li  className="navlink">
           <NavLink style={({ isActive }) => {
     return {
+      textDecoration: "none",
       color: isActive ? "white" : "black",
     };
   }}to="/about">About</NavLink>

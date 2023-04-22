@@ -31,10 +31,6 @@ body {
   margin: 0; /* Remove margins */
 }
 
-.navlink{
-  color: #f1f1f1;
-}
-
 .searchBar {
   display: flex;
   justify-content: center;

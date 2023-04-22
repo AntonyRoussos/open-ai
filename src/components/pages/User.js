@@ -25,7 +25,7 @@ const User = () => {
         <div>Loading...</div>
       ) : (
         <div>
-          <div style={{ display: "flex" }}>
+          <div style={{ display: "flex" , justifyContent: "center", alignItems: "center" }}>
             <div style={{ margin: 5 }}>
               <img
                 style={{
