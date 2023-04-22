@@ -1,9 +1,17 @@
 import React, { useEffect, useState } from "react";
 import UserCard from "../common/UserCard";
+import { useDispatch, useSelector } from "react-redux";
+import { storeData } from "../../redux/action";
 
 const Home = () => {
   const [users, setUsers] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
+  const usersRedux = useSelector((state) => state.reducer.users);
+  console.log("user in local state");
+  console.log(users);
+  console.log("user in reducer");
+  console.log(usersRedux);
+  const dispatch = useDispatch();
 
   useEffect(() => {
     getUsers();
@@ -12,6 +20,7 @@ const Home = () => {
   const getUsers = async () => {
     const response = await fetch("https://jsonplaceholder.typicode.com/users");
     const data = await response.json();
+    dispatch(storeData({ data }));
     setUsers(data);
   };
 
