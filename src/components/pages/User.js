@@ -21,7 +21,7 @@ const User = () => {
   return (
     <>
       {loading ? (
-        <div>Loading...</div>
+        <p>Loading...</p>
       ) : (
         <div>
           <div style={{ display: "flex" }}>
