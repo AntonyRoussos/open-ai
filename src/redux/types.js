@@ -1,0 +1,5 @@
+export const GET_USERS_PENDING = "GET_USERS_PENDING";
+export const GET_USERS_SUCCESS = "GET_USERS_SUCCESS";
+export const GET_USERS_FAILURE = "GET_USERS_FAILURE";
+
+export const STORE_DATA = "STORE_DATA";

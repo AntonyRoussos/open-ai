@@ -7,6 +7,8 @@ import Profile from "./components/pages/Profile";
 import Header from "./components/common/Header";
 import User from "./components/pages/User";
 const App = () => {
+
+  
   return (
     <>
       <Router>
