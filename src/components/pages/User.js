@@ -20,19 +20,27 @@ const User = () => {
   }, []);
   return (
     <>
-      <div className="pageTitle"><h2>User</h2></div>
+      <div className="pageTitle">
+        <h2>User</h2>
+      </div>
       {loading ? (
         <div>Loading...</div>
       ) : (
         <div>
-          <div style={{ display: "flex" , justifyContent: "center", alignItems: "center" }}>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
             <div style={{ margin: 5 }}>
               <img
                 style={{
                   width: 200,
                   height: 200,
                   background: "#f92344",
-                  borderRadius: 16,
+                  borderRadius: 100,
                 }}
                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVYUbi-Jf5QxIW-koSAO97ZmKrOXadXeJ3xQ&usqp=CAU"
                 alt="user"
@@ -46,10 +54,13 @@ const User = () => {
                 justifyContent: "space-evenly",
               }}
             >
-              <div><b>{user.name}</b></div>
+              <div>
+                <b>{user.name}</b>
+              </div>
               <div>Company: {user.company?.name}</div>
               <div>Email: {user.email}</div>
-              <div className="site"
+              <div
+                className="site"
                 style={{ cursor: "pointer" }}
                 onClick={() => {
                   window.location.href = `https://www.${user.website}`;
